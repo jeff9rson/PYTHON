@@ -1,9 +1,0 @@
-# 4. crie um cadastro de clientes recebendo nome, idade,date de aniversario e endereço completo. adicione todas as informações em um dicionario.imprima ao final
-
-cad_1 = input('digite seu nome ')
-cad_2 = input('digite sua idade ')
-cad_3 = input('informe a data do seu aniversario ')
-cad_4 = input('informe o seu endereço completo ')
-dic = {}
-dic.update({cad_1})
-print(cad_1,cad_2,cad_3,cad_4)

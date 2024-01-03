@@ -19,5 +19,16 @@ class BombaGasolina:
     def abastecer_litro(self):
        litro = float('Digite a quantidade de litros:')
        self.valor_pagar = litro * self.valor_combustivel
-       print(f'você vai pagar R$ { self.valor_pagar} em {litro} litros')
-    def
+       if litro > self.quantidade_combustivel:
+          print(f'a quantidade de litros insuficiente. A quantidade de litros da bomba é{self.quantidade_combustivel}litros')
+          self.abastecer_litro()
+       elif self.quantidade_combustivel>= litro:
+          print(f'voce vai pagar R${self.valor_pagar} em {litro} litros')
+          self.quantidade_combustivel -= litro
+          print(f'a Quantidade atuais da bomba é{self.quantidade_combustivel}litros')
+    def abastecer_dinheiro(self):
+       dinheiro= float(input(f'digite o valor que vc quer de{self.tipo_combustivel}:'))
+       litros_abastecidos = dinheiro / self.valor_combustivel
+       print(f'voce vai pagar R${dinheiro} em {litros_abastecidos:.2f}litros')
+   
+    
